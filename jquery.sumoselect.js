@@ -210,13 +210,17 @@
                 basicEvents: function () {
                     var O = this;
                     O.CaptionCont.click(function (evt) {
+						console.log('CaptionCont click');
                         if (O.is_opened) O.hideOpts(); else O.showOpts();
                         // O.E.focus();
 
                         O.E.trigger('click');
                     });
 
-                    O.backdrop.click(function () { O.hideOpts(); });
+                    O.backdrop.click(function () {
+						console.log('backdrop click');
+
+					O.hideOpts(); });
 
                     O.E.on('blur', function () {
                         //setTimeout(function () {
